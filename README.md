@@ -8,7 +8,7 @@ This is the official website for the Brain Plasticity Laboratory at CIMeC (Cente
 - **Melissa Null** - PhD Candidate
 - **Jacopo Schenetti** - Research Assistant
 - **Chiara Giannina Leu** - Post-Doctoral Researcher
-- **Elena Mongiardini** - Intern
+- **Elena Mongiardini** - Post-Doctoral Researcher
 - **Martina Placeholder** - Intern
 
 ## Research Focus

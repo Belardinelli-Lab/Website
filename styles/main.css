@@ -250,7 +250,8 @@ h2 {
 
 .overview h2 {
     color: #ffffff !important;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    font-weight: 700;
 }
 
 .overview-content p {

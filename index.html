@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.75">
+    <meta name="description" content="Brain Plasticity Laboratory at CIMeC, University of Trento. Research in brain state-dependent stimulation, neuroplasticity, and EEG-TMS applications.">
+    <meta name="keywords" content="neuroscience, brain plasticity, TMS, EEG, brain stimulation, CIMeC, University of Trento, Paolo Belardinelli">
+    <meta name="author" content="Brain Plasticity Laboratory - CIMeC">
+    <meta property="og:title" content="Brain Plasticity Laboratory - CIMeC">
+    <meta property="og:description" content="Understanding brain responses and modulating plasticity mechanisms through state-dependent stimulation">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.cimec.unitn.it/node/1593">
+    <title>Brain and Plasticity Lab - CIMeC</title>
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="Pictures/Logos/CIMeC.webp" alt="CIMeC Logo" class="logo-cimec">
+                <div class="nav-text">
+                    <h2>Brain Plasticity Lab</h2>
+                    <p>CIMeC - University of Trento</p>
+                </div>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#research" class="nav-link">Research</a></li>
+                <li class="nav-item"><a href="#team" class="nav-link">Team</a></li>
+                <li class="nav-item"><a href="#publications" class="nav-link">Publications</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Code</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content" role="main">
+        <!-- Hero Section -->
+        <section id="home" class="hero" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Pictures/manifattura.webp'); background-size: cover; background-position: center;">
+            <div class="hero-content">
+                <h1>Brain Plasticity Laboratory</h1>
+                <p class="hero-subtitle">Understanding brain responses and modulating plasticity mechanisms through state-dependent stimulation</p>
+            </div>
+            <div class="hero-visual">
+                <div class="brain-animation">
+                    <i class="fas fa-brain"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Overview Section -->
+        <section id="overview" class="overview" style="background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('Pictures/tms_eeg.webp'); background-size: cover; background-position: center;">
+            <div class="container">
+                <h2>Research Overview</h2>
+                <div class="overview-content">
+                    <p>We aim to understand how brain responses to external stimuli are differentially shaped by ongoing brain states. We are also interested in optimally modulating plasticity mechanisms by applying brain state–dependent, closed-loop, real-time network stimulation. To this end, we use non-invasive brain stimulation (EEG-TMS: TMS triggered by EEG-defined states) in both healthy individuals and adults with neurological or psychiatric conditions.</p>
+                    
+                    <p>Several major challenges still need to be addressed to achieve a deeper understanding of the mechanisms underlying brain state–dependent stimulation. First, a more comprehensive characterization of the relationship between brain anatomy and function is required. This will help anchor neurophysiological mechanisms to cortical anatomy in future research. Second, defining what constitutes a "brain state" suitable for stimulation remains both a technical and conceptual challenge.</p>
+                    
+                    <p>Our goal is to systematically investigate how the state of a brain network immediately before stimulation shapes both peripheral (muscular) and cortical responses. Ultimately, this research aims to develop new real-time EEG-TMS applications to advance our understanding of fundamental brain functions and to improve restorative and rehabilitative outcomes in patients with stroke or psychiatric disorders.</p>
+                    
+                    <div class="research-goals">
+                        <div class="goal">
+                            <i class="fas fa-microscope"></i>
+                            <h3>Anatomical Understanding</h3>
+                            <p>A deeper insight of the relationship between anatomy and function to ground neurophysiological mechanisms to cortical anatomy.</p>
+                        </div>
+                        <div class="goal">
+                            <i class="fas fa-wave-square"></i>
+                            <h3>Brain State Definition</h3>
+                            <p>Systematically studying how brain network states before stimulation influence both peripheral and cortical outcomes.</p>
+                        </div>
+                        <div class="goal">
+                            <i class="fas fa-heartbeat"></i>
+                            <h3>Clinical Applications</h3>
+                            <p>Developing real-time EEG-TMS applications for understanding brain functions and improving rehabilitative approaches in stroke and psychiatric diseases.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Directions Section -->
+        <section id="research" class="research">
+            <div class="container">
+                <h2>Research Directions</h2>
+                <div class="research-grid">
+                    <div class="research-card">
+                        <div class="research-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Non-invasive Real-Time Brain State Dependent Stimulation</h3>
+                        <p>Developing advanced techniques for real-time brain state detection and targeted stimulation protocols.</p>
+                    </div>
+                    <div class="research-card">
+                        <div class="research-icon">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <h3>Brain Plasticity Mechanisms with a Focus on Stroke</h3>
+                        <p>Investigating neuroplasticity mechanisms and their therapeutic potential for stroke rehabilitation.</p>
+                    </div>
+                    <div class="research-card">
+                        <div class="research-icon">
+                            <i class="fas fa-user-clock"></i>
+                        </div>
+                        <h3>Anatomical and Functional Correlates of Aging</h3>
+                        <p>Exploring how aging affects brain structure and function, and developing interventions to maintain cognitive health.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team" class="team">
+            <div class="container">
+                <h2>Our Team</h2>
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="Pictures/Team members/Paolo Belardinelli.jpeg" alt="Paolo Belardinelli">
+                        </div>
+                        <div class="member-info">
+                            <h3>Paolo Belardinelli</h3>
+                            <p class="position">Principal Investigator</p>
+                            <p class="description">Leading research in brain state-dependent stimulation and neuroplasticity mechanisms.</p>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="Pictures/Team members/Melissa Null.jpg" alt="Melissa Null">
+                        </div>
+                        <div class="member-info">
+                            <h3>Melissa Null</h3>
+                            <p class="position">PhD Candidate</p>
+                            <p class="description">Investigating brain plasticity mechanisms and real-time stimulation protocols.</p>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="Pictures/Team members/Jacopo Schenetti.jpg" alt="Jacopo Schenetti">
+                        </div>
+                        <div class="member-info">
+                            <h3>Jacopo Schenetti</h3>
+                            <p class="position">Research Assistant</p>
+                            <p class="description">Supporting research activities in brain stimulation and data analysis.</p>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="Pictures/Team members/Chiara Leu.jpg" alt="Chiara Giannina Leu">
+                        </div>
+                        <div class="member-info">
+                            <h3>Chiara Giannina Leu</h3>
+                            <p class="position">Post-Doctoral Researcher</p>
+                            <p class="description">Conducting advanced research in neuroplasticity and brain stimulation techniques.</p>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="Pictures/Team members/Elena Mongiardini.jpg" alt="Elena Mongiardini">
+                        </div>
+                        <div class="member-info">
+                            <h3>Elena Mongiardini</h3>
+                            <p class="position">Phd in Bioengineering</p>
+                            <p class="description">Contributing to research projects and gaining experience in neuroscience methods.</p>
+                        </div>
+                    </div>
+                    <div class="team-member">
+                        <div class="member-photo placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="member-info">
+                            <h3>Martina Cavalli</h3>
+                            <p class="position">Intern</p>
+                            <p class="description">Supporting laboratory activities and learning advanced neuroscience techniques.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Collaborations Section -->
+        <section id="collaborations" class="collaborations">
+            <div class="container">
+                <h2>Ongoing Collaborations</h2>
+                <div class="collaboration-grid">
+                    <div class="collaboration-item">
+                        <h3>Ulf Ziemann</h3>
+                        <p class="affiliation">Head of Department of Neurology</p>
+                        <p class="institution">University Clinics of Tuebingen, Germany</p>
+                    </div>
+                    <div class="collaboration-item">
+                        <h3>Christoph Zrenner</h3>
+                        <p class="affiliation">Department of Psychiatry</p>
+                        <p class="institution">University of Toronto, Toronto, ON, Canada</p>
+                    </div>
+                    <div class="collaboration-item">
+                        <h3>Giulia Liberati</h3>
+                        <p class="affiliation">Institute of Neuroscience - IoNS</p>
+                        <p class="institution">Université Catholique de Louvain</p>
+                    </div>
+                    <div class="collaboration-item">
+                        <h3>Viviana Versace</h3>
+                        <p class="affiliation">Research Department</p>
+                        <p class="institution">Sabes, Bolzano</p>
+                    </div>
+                    <div class="collaboration-item">
+                        <h3>Viviana Betti</h3>
+                        <p class="affiliation">Department of Psychology</p>
+                        <p class="institution">La Sapienza University and Santa Lucia Hospital, Rome</p>
+                    </div>
+                </div>
+
+                <div class="grants-section">
+                    <h3>Grants & Fundings</h3>
+                    <div class="grants-grid">
+                        <div class="grant-card">
+                            <div class="grant-icon">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                            <h4>Connect2Brain</h4>
+                            <span class="grant-period">2018-2024</span>
+                            <p class="grant-team">Risto Ilmoniemi, Ulf Ziemann, Gianluca Romani</p>
+                        </div>
+                        
+                        <div class="grant-card">
+                            <div class="grant-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h4>MUR - PRIN CALL 2022</h4>
+                            <span class="grant-period">2022-ongoing</span>
+                            <p class="grant-description">"COordination and iNtegration of motion in the TACTile and motor system - CONTACT"</p>
+                            <p class="grant-pi"><strong>PI:</strong> Viviana Betti (SH4 panel)</p>
+                            <p class="grant-consortium"><strong>Consortium:</strong> Alessandro Moscatelli (Tor Vergata), Matteo Bianchi (Pisa), Paolo Belardinelli (Trento)</p>
+                        </div>
+                        
+                        <div class="grant-card">
+                            <div class="grant-icon">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <h4>CT SANIONA</h4>
+                            <span class="grant-period">Ongoing</span>
+                            <p class="grant-description">Regional Research Funding</p>
+                        </div>
+                        
+                        <div class="grant-card">
+                            <div class="grant-icon">
+                                <i class="fas fa-hospital"></i>
+                            </div>
+                            <h4>PD SABES</h4>
+                            <span class="grant-period">Ongoing</span>
+                            <p class="grant-description">Provincial Health System Research Grant</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publications" class="publications">
+            <div class="container">
+                <h2>Selected Publications</h2>
+                <div class="publications-grid">
+                    <div class="publication-item" data-pdf="Pubblications/1-s2.0-S0278584624002355-main.pdf">
+                        <div class="publication-header">
+                            <h3> Involvement of muscarinic acetylcholine receptor-mediated cholinergic 
+neurotransmission in TMS–EEG responses</h3>
+                            <p class="publication-year">2025</p>
+                        </div>
+                        <div class="publication-actions">
+                            <button class="expand-btn" onclick="togglePreview(this)">
+                                <i class="fas fa-chevron-down"></i> Read Abstract
+                            </button>
+                            <a href="Pubblications/1-s2.0-S0278584624002355-main.pdf" target="_blank" class="pdf-btn">
+                                <i class="fas fa-file-pdf"></i> View PDF
+                            </a>
+                        </div>
+                        <div class="publication-details" style="display: none;">
+                            <p><strong>Abstract:</strong>  The combination of transcranial magnetic stimulation and electroencephalography (TMS–EEG) is emerging as a 
+valuable tool for investigating brain functions in health and disease. However, the detailed neural mechanisms 
+underlying TMS–EEG responses, including TMS-evoked EEG potentials (TEPs) and TMS-induced EEG oscillations 
+(TIOs), remain largely unknown. Combining TMS–EEG with pharmacological interventions provides a unique 
+opportunity to elucidate the roles of specific receptor-mediated neurotransmissions in these responses. Here, we 
+investigated the involvement of muscarinic acetylcholine receptor (mAChR)-mediated cholinergic neurotrans
+mission in TMS–EEG responses by evaluating the effects of mAChR antagonists on TEPs and TIOs in twenty-four 
+healthy participants using a randomized, placebo-controlled crossover design. TEPs and TIOs were measured 
+before and after administering a single oral dose of scopolamine (a non-selective mAChR antagonist), biperiden 
+(an M1 mAChR antagonist), or placebo, with TMS targeting the left medial prefrontal cortex (mPFC), angular 
+gyrus (AG), and supplementary motor area (SMA). The results indicated that mAChR-mediated cholinergic 
+neurotransmission played a role in TEPs, but not TIOs, in a target-specific manner. Specifically, scopolamine 
+significantly increased the amplitude of a local TEP component between approximately 40 and 63 ms post- 
+stimulus when TMS was applied to the SMA, but not the mPFC or AG. Biperiden produced a similar but less 
+pronounced effect. Importantly, the effects of these mAChR antagonists on TEPs were independent of those on 
+sensory-evoked EEG potentials caused by TMS-associated sensory stimulation. These findings expand our un
+derstanding of TMS–EEG physiology, providing insights for its application in physiological and clinical research.</p>
+                            <p><strong>Authors:</strong> Yufei Song, Pedro C. Gordon, Paolo Belardinelli, Olivier Roy, Maryam Rostami, Johanna Metsomaa, Ulf Ziemann</p>
+                        </div>
+                    </div>
+
+                    <div class="publication-item" data-pdf="Pubblications/1-s2.0-S1388245725005991-main.pdf">
+                        <div class="publication-header">
+                            <h3>Motor cortex excitability states in chronic stroke patients probed by 
+EEG-TMS</h3>
+                            <p class="publication-year">2025</p>
+                        </div>
+                        <div class="publication-actions">
+                            <button class="expand-btn" onclick="togglePreview(this)">
+                                <i class="fas fa-chevron-down"></i> Read Abstract
+                            </button>
+                            <a href="Pubblications/1-s2.0-S1388245725005991-main.pdf" target="_blank" class="pdf-btn">
+                                <i class="fas fa-file-pdf"></i> View PDF
+                            </a>
+                        </div>
+                        <div class="publication-details" style="display: none;">
+                            <p><strong>Abstract:</strong>  Objective: In healthy subjects, the trough vs. no-trough phases of the sensorimotor µ-rhythm correspond to high- 
+vs. low-excitability states of the motor cortex (M1). We tested this excitability differentiation in the ipsilesional 
+(iM1) and contralesional M1 (cM1) of chronic stroke patients.
+ Methods: 19 chronic stroke patients received single-pulse transcranial magnetic stimulation (TMS), separately 
+over the iM1 and cM1, during EEG recordings. High and low M1 excitability states were defined by binning a 
+post-hoc estimate of the µ-phase at TMS delivery. TMS-evoked EEG potentials (TEPs) and time–frequency re
+sponses were characterized for excitability states and hemispheres. The motor function of the affected arm was 
+tested by the Fugl-Meyer Assessment Upper Extremity (FMA-UE.
+ Results: In cM1, TMS at the high- vs. low-excitability state resulted in larger TEP amplitudes and increased post- 
+pulse power in the beta band. In iM1, these modulations were not significant except for post-pulse beta power. 
+This retained excitability differentiation significantly correlated with FMA-UE.
+ Conclusions: The degree of excitability differentiation in iM1 depending on phase of the sensorimotor µ-rhythm 
+correlates with individual affected upper extremity motor function.
+ Significance: The degree of excitability differentiation in iM1 might serve as a new independent marker of motor 
+recovery.</p>
+                            <p><strong>Authors:</strong> Arianna Brancaccio, Wala Mahmoud, Davide Tabarelli, Ulf Ziemann, David Baur, Johanna Roesch, Paolo Belardinelli</p>
+                        </div>
+                    </div>
+
+                    <div class="publication-item" data-pdf="Pubblications/1-s2.0-S1935861X19304140-main.pdf">
+                        <div class="publication-header">
+                            <h3> Brain oscillation-synchronized stimulation of the left dorsolateral
+ prefrontal cortex in depression using real-time EEG-triggered TMS</h3>
+                            <p class="publication-year">2020</p>
+                        </div>
+                        <div class="publication-actions">
+                            <button class="expand-btn" onclick="togglePreview(this)">
+                                <i class="fas fa-chevron-down"></i> Read Abstract
+                            </button>
+                            <a href="Pubblications/1-s2.0-S1935861X19304140-main.pdf" target="_blank" class="pdf-btn">
+                                <i class="fas fa-file-pdf"></i> View PDF
+                            </a>
+                        </div>
+                        <div class="publication-details" style="display: none;">
+                            <p><strong>Abstract:</strong>Background: Repetitive transcranial magnetic stimulation (rTMS) of the left dorsolateral prefrontal
+ cortex (DLPFC) is an effective treatment for major depressive disorder (MDD), but response rates are low
+ and effect sizes small. Synchronizing TMS pulses with instantaneous brain oscillations can reduce
+ variability and increase efficacy of TMS-induced plasticity.
+ Objective: To study whether brain oscillation-synchronized rTMS is feasible, safe and has neuro
+modulatory effects when targeting the DLPFC of patients with MDD.
+ Methods: Using real-time EEG-triggered TMS we conducted a pseudo-randomized controlled single
+session crossover trial of brain oscillation-synchronized rTMS of left DLPFC in 17 adult patients with
+ antidepressant-resistant MDD. Stimulation conditions in separate sessions were: (1) rTMS triggered at
+ the negative EEG peak of instantaneous alpha oscillations (alpha-synchronized rTMS), (2) a variation of
+ intermittent theta-burst stimulation (modified iTBS), and (3) a random alpha phase control condition.
+ Results: Triggering TMS at the negative peak of instantaneous alpha oscillations by real-time analysis of
+ the electrode F5 EEG signal was successful in 15 subjects. Two subjects reported mild transient
+ discomfort at the site of stimulation during stimulation; no serious adverse events were reported. Alpha
+synchronized rTMS, but not modified iTBS or the random alpha phase control condition, reduced resting
+state alpha activity in left DLPFC and increased TMS-induced beta oscillations over frontocentral
+ channels.
+ Conclusions: Alpha-synchronized rTMS of left DLPFC is feasible, safe and has specific single-session
+ neuromodulatory effects in patients with antidepressant-resistant MDD. Future studies need to further
+ elucidate the mechanisms, optimize the parameters and investigate the therapeutic potential and effi
+cacy of brain oscillation-synchronized rTMS in MDD.</p>
+                            <p><strong>Authors:</strong>Brigitte Zrenner, Christoph Zrenner, Pedro Caldana Gordon, Paolo Belardinelli, Eric J. McDermott, Surjo R. Soekadar, Andreas J. Fallgatter, Ulf Ziemann, Florian Müller-Dahlhaus</p>
+                        </div>
+                    </div>
+
+                    <div class="publication-item" data-pdf="Pubblications/1-s2.0-S1935861X23016960-main.pdf">
+                        <div class="publication-header">
+                            <h3> TMS combined with EEG: Recommendations and open issues for data
+ collection and analysis</h3>
+                            <p class="publication-year">2023</p>
+                        </div>
+                        <div class="publication-actions">
+                            <button class="expand-btn" onclick="togglePreview(this)">
+                                <i class="fas fa-chevron-down"></i> Read Abstract
+                            </button>
+                            <a href="Pubblications/1-s2.0-S1935861X23016960-main.pdf" target="_blank" class="pdf-btn">
+                                <i class="fas fa-file-pdf"></i> View PDF
+                            </a>
+                        </div>
+                        <div class="publication-details" style="display: none;">
+                            <p><strong>Abstract:</strong>  Transcranial magnetic stimulation (TMS) evokes neuronal activity in the targeted cortex and connected
+ brain regions. The evoked brain response can be measured with electroencephalography (EEG). TMS
+ combined with simultaneous EEG (TMS EEG) is widely used for studying cortical reactivity and con
+nectivity at high spatiotemporal resolution. Methodologically, the combination of TMS with EEG is
+ challenging, and there are many open questions in the field. Different TMS EEG equipment and ap
+proaches for data collection and analysis are used. The lack of standardization may affect reproducibility
+ and limit the comparability of results produced in different research laboratories. In addition, there is
+ controversy about the extent to which auditory and somatosensory inputs contribute to transcranially
+ evoked EEG. This review provides a guide for researchers who wish to use TMS EEG to study the
+ reactivity of the human cortex. A worldwide panel of experts working on TMS EEG covered all aspects
+ that should be considered inTMS EEG experiments, providing methodological recommendations (when
+ possible) for effective TMS EEG recordings and analysis. The panel identified and discussed the chal
+lenges of the technique, particularly regarding recording procedures, artifact correction, analysis, and
+ interpretation of the transcranial evoked potentials (TEPs). Therefore, this work offers an extensive
+ overview of TMS EEG methodology and thus may promote standardization of experimental and
+ computational procedures across groups.</p>
+                            <p><strong>Authors:</strong>  Julio C. Hernandez-Pavon, Domenica Veniero, Til Ole Bergmann,
+ Paolo Belardinelli, Marta Bortoletto, Silvia Casarotto, Elias P. Casula,
+ Faranak Farzan, Matteo Fecchio, Petro Julkunen, Elisa Kallioniemi,
+ Pantelis Lioumis, Johanna Metsomaa, Carlo Miniussi, Tuomas P. Mutanen,
+ Lorenzo Rocchi, Nigel C. Rogasch, Mouhsin M. Shafi, Hartwig R. Siebner,
+ Gregor Thut, Christoph Zrenner, Ulf Ziemann, Risto J. Ilmoniemi</p>
+                        </div>
+                    </div>
+
+                    <div class="publication-item" data-pdf="Pubblications/Fully_Hyperbolic_Neural_Networks_A_Novel_Approach_to_Studying_Aging_Trajectories.pdf">
+                        <div class="publication-header">
+                            <h3>Hyperbolic Neural Networks for Aging Trajectories</h3>
+                            <p class="publication-year">2025</p>
+                        </div>
+                        <div class="publication-actions">
+                            <button class="expand-btn" onclick="togglePreview(this)">
+                                <i class="fas fa-chevron-down"></i> Read Abstract
+                            </button>
+                            <a href="Pubblications/Fully_Hyperbolic_Neural_Networks_A_Novel_Approach_to_Studying_Aging_Trajectories.pdf" target="_blank" class="pdf-btn">
+                                <i class="fas fa-file-pdf"></i> View PDF
+                            </a>
+                        </div>
+                        <div class="publication-details" style="display: none;">
+                            <p><strong>Abstract:</strong>Characterizing age-related alterations in brain
+ networks is crucial for understanding aging trajectories
+ and identifying deviations indicative of neurodegenerative
+ disorders, such as Alzheimer’s disease. In this study, we
+ developed a Fully Hyperbolic Neural Network (FHNN) to
+ embed functional brain connectivity graphs derived from
+ magnetoencephalography (MEG) data into low dimensions
+ on a Lorentz model of hyperbolic space. Using this model,
+ we computed hyperbolic embeddings of the MEG brain
+ networks of 587 individuals from the Cambridge Centre
+ for Ageing and Neuroscience (Cam-CAN) dataset. Notably,
+ we leveraged a unique metric—the radius of the node
+ embeddings—which effectively captures the hierarchical
+ organization of the brain, to characterize subtle hierarchi
+cal organizational changes in various brain subnetworks
+ attributed to the aging process. Our findings revealed that
+ a considerable number of subnetworks exhibited a reduc
+tion in hierarchy during aging, with some showing grad
+ual changes and others undergoing rapid transformations
+ in the elderly. Moreover, we demonstrated that hyperbolic
+ features outperform traditional graph-theoretic measures in
+ capturing age-related information in brain networks. Over
+all, our study represents the first evaluation of hyperbolic
+ embeddings in MEG brain networks for studying aging
+ trajectories, shedding light on critical regions undergoing</p>
+                            <p><strong>Authors:</strong>  Hugo Ramirez, Davide Tabarelli
+ , Arianna Brancaccio
+ , Paolo Belardinelli, Elisabeth B. Marsh, Michael Funke, John C. Mosher, Fernando Maestú
+ , Mengjia Xu, Dimitrios Pantazis</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="publications-note-bottom">
+                    <p>For the complete and most up-to-date list of publications, please visit:</p>
+                    <a href="https://webapps.unitn.it/du/en/Persona/PER0039355/Pubblicazioni" target="_blank" class="publications-link-small">
+                        <i class="fas fa-external-link-alt"></i>
+                        Paolo Belardinelli's Complete Publications
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Brain Plasticity Laboratory</h3>
+                        <p class="lab-description">Part of CIMeC - The Center for Mind/Brain Sciences at the University of Trento</p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:Paolo.belardinelli@unitn.it">Paolo.belardinelli@unitn.it</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fab fa-github"></i>
+                                <a href="https://github.com/Belardinelli-Lab" target="_blank">GitHub Repository</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-globe"></i>
+                                <a href="https://www.cimec.unitn.it/node/1593" target="_blank">Official Lab Page</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>CIMeC - University of Trento, Italy</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cimec-info">
+                        <h4>About CIMeC</h4>
+                        <p>The Center for Mind/Brain Sciences (CIMeC) is an interdepartmental center of the University of Trento dedicated to the study of the mind and brain through an interdisciplinary approach that combines neuroscience, psychology, cognitive science, and computer science.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logos">
+                    <img src="Pictures/Logos/CIMeC.webp" alt="CIMeC Logo">
+                </div>
+                <div class="footer-text">
+                    <p>&copy; 2024 Brain Plasticity Laboratory - CIMeC, University of Trento</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/config.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

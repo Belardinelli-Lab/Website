@@ -48,13 +48,14 @@ const config = {
         },
         {
             name: "Elena Mongiardini",
-            position: "Intern",
+            position: "Phd in Bioengineering",
             description: "Contributing to research projects and gaining experience in neuroscience methods.",
             photo: "",
             hasPhoto: false
         },
+    
         {
-            name: "Martina Placeholder",
+            name: "Martina Cavalli",
             position: "Intern",
             description: "Supporting laboratory activities and learning advanced neuroscience techniques.",
             photo: "",

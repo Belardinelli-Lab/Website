@@ -274,7 +274,8 @@ h2 {
     padding: 2rem;
     border-radius: 15px;
     text-align: center;
-    box-shadow: none;
+    box-shadow: none !important;
+    border: 1px solid #e0e0e0;
     transition: transform 0.3s ease;
 }
 
@@ -311,16 +312,16 @@ h2 {
 }
 
 .research-card {
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: white;
     padding: 2.5rem;
     border-radius: 20px;
     text-align: center;
+    border: 1px solid #e0e0e0;
     transition: all 0.3s ease;
 }
 
 .research-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
 }
 
 .research-icon {
@@ -332,7 +333,7 @@ h2 {
     align-items: center;
     justify-content: center;
     margin: 0 auto 1.5rem;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
 }
 
 .research-icon i {

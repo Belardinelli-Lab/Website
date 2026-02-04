@@ -78,6 +78,12 @@ a:focus {
     gap: 1rem;
 }
 
+.nav-logo-img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+
 .logo-cimec, .logo-unitn {
     height: 50px;
     width: auto;

@@ -79,9 +79,12 @@ a:focus {
 }
 
 .nav-logo-img {
-    height: 50px;
+    height: 35px;
     width: auto;
     object-fit: contain;
+    background-color: white;
+    padding: 5px;
+    border-radius: 4px;
 }
 
 .logo-cimec, .logo-unitn {

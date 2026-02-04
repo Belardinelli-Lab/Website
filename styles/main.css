@@ -34,22 +34,6 @@ a:focus {
     padding: 0 2rem;
 }
 
-/* Skip to main content for accessibility */
-.skip-link {
-    position: absolute;
-    top: -40px;
-    left: 6px;
-    background: #3498db;
-    color: white;
-    padding: 8px;
-    text-decoration: none;
-    z-index: 1001;
-}
-
-.skip-link:focus {
-    top: 6px;
-}
-
 /* Navigation */
 .navbar {
     background: rgba(255, 255, 255, 0.95);

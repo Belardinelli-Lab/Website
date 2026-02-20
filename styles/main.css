@@ -142,7 +142,8 @@ a:focus {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Pictures/manifattura.webp');
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Pictures/Lab 5.JPG');
+    background-position: 50% 75%;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -293,8 +294,19 @@ h2 {
 }
 
 /* Research Section */
+.research h2,
+.team h2,
+.collaborations h2,
+.grants h2,
+.publications h2,
+.contact h2 {
+    color: #ffffff !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    font-weight: 700;
+}
+
 .research {
-    background: white;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Pictures/sfondo 2.jpg') center/cover;
 }
 
 .research-grid {
@@ -346,7 +358,7 @@ h2 {
 
 /* Team Section */
 .team {
-    background: #f8f9fa;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Pictures/sfondo 7.jpg') center/cover;
 }
 
 .team-grid {
@@ -449,13 +461,98 @@ h2 {
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
 }
 
+/* Ping Pong Carousel Section */
+.ping-pong-carousel {
+    padding: 4rem 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Pictures/sfondo 5.jpg') center/cover;
+}
+
+.ping-pong-carousel h2 {
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: #ffffff !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    font-weight: 700;
+}
+
+.carousel-subtitle {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.85);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.carousel-wrapper {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.carousel-container {
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 500px;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #2c3e50;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.carousel-btn:hover {
+    background: white;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn-prev {
+    left: 20px;
+}
+
+.carousel-btn-next {
+    right: 20px;
+}
+
 .join-us-btn i {
     font-size: 1.2rem;
 }
 
 /* Collaborations Section */
 .collaborations {
-    background: white;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Pictures/sfondo 6.jpg') center/cover;
 }
 
 .collaboration-grid {
@@ -490,11 +587,23 @@ h2 {
 }
 
 .grants-section {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Pictures/sfondo 4.jpg') center/cover;
     color: white;
     padding: 3rem 2rem;
     border-radius: 20px;
     margin-top: 3rem;
+}
+
+.grants {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Pictures/sfondo 4.jpg') center/cover;
+    padding: 4rem 0;
+    color: white;
+}
+
+.grants h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 2.5rem;
 }
 
 .grants-section h3 {
@@ -592,7 +701,7 @@ h2 {
 
 /* Publications Section */
 .publications {
-    background: #f8f9fa;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Pictures/sfondo 5.jpg') center/cover;
 }
 
 .publications-grid {
@@ -745,7 +854,14 @@ h2 {
 
 /* Contact Section */
 .contact {
-    background: white;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Pictures/Lab 4.JPG') center 70%/cover;
+    padding-bottom: 20rem;
+    display: flex;
+    align-items: center;
+}
+
+.contact > .container {
+    width: 100%;
 }
 
 .contact-content {
@@ -753,16 +869,20 @@ h2 {
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     align-items: start;
+    margin-top: 4rem;
 }
 
 .contact-info h3 {
     font-size: 1.5rem;
-    color: #2c3e50;
+    color: #5dade2;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
     margin-bottom: 1rem;
+    font-weight: 700;
 }
 
 .lab-description {
-    color: #666;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
     margin-bottom: 2rem;
     font-size: 1.1rem;
 }
@@ -791,12 +911,17 @@ h2 {
     transition: color 0.3s ease;
 }
 
+.contact-item span {
+    color: #3498db;
+}
+
 .contact-item a:hover {
     color: #2980b9;
 }
 
 .cimec-info {
-    background: #f8f9fa;
+    background: rgba(248, 249, 250, 0.35);
+    backdrop-filter: blur(6px);
     padding: 2rem;
     border-radius: 15px;
     border-left: 4px solid #3498db;
@@ -804,12 +929,13 @@ h2 {
 
 .cimec-info h4 {
     font-size: 1.3rem;
-    color: #2c3e50;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
     margin-bottom: 1rem;
 }
 
 .cimec-info p {
-    color: #666;
+    color: rgba(255, 255, 255, 0.9);
     line-height: 1.6;
 }
 
@@ -823,7 +949,26 @@ h2 {
 .footer-content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.footer-cimec {
+    flex: 1;
+    max-width: 450px;
+}
+
+.footer-cimec h4 {
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.footer-cimec p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.85rem;
+    line-height: 1.5;
 }
 
 .footer-logos {
@@ -977,6 +1122,28 @@ h2 {
     
     .member-photo {
         height: 200px;
+    }
+    
+    .carousel-slide {
+        height: 350px;
+    }
+    
+    .carousel-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .carousel-btn-prev {
+        left: 10px;
+    }
+    
+    .carousel-btn-next {
+        right: 10px;
+    }
+    
+    .carousel-subtitle {
+        font-size: 1rem;
     }
     
     .collaboration-grid {
@@ -1136,6 +1303,24 @@ h2 {
     
     .member-photo {
         height: 180px;
+    }
+    
+    .carousel-slide {
+        height: 250px;
+    }
+    
+    .carousel-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 0.9rem;
+    }
+    
+    .carousel-btn-prev {
+        left: 5px;
+    }
+    
+    .carousel-btn-next {
+        right: 5px;
     }
     
     .member-info {

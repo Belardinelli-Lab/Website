@@ -229,26 +229,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Loading animation
     function showLoadingComplete() {
         document.body.classList.add('loaded');
-        
-        // Add CSS for loading state
-        const style = document.createElement('style');
-        style.textContent = `
-            body.loaded * {
-                animation: fadeInUp 0.6s ease forwards;
-            }
-            
-            @keyframes fadeInUp {
-                from {
-                    opacity: 0;
-                    transform: translateY(30px);
-                }
-                to {
-                    opacity: 1;
-                    transform: translateY(0);
-                }
-            }
-        `;
-        document.head.appendChild(style);
     }
     
     // Show loading complete after DOM is fully loaded
@@ -379,42 +359,44 @@ document.addEventListener('DOMContentLoaded', function() {
     const fileUploadText = document.querySelector('.file-upload-text span');
     
     // File upload handling
-    fileInput.addEventListener('change', function(e) {
-        const file = e.target.files[0];
-        if (file) {
-            fileUploadText.textContent = `Selected: ${file.name}`;
-            fileUploadArea.style.borderColor = '#28a745';
-            fileUploadArea.style.background = '#f8fff9';
-        } else {
-            fileUploadText.textContent = 'Click to select your CV or drag and drop';
-            fileUploadArea.style.borderColor = '#e1e8ed';
-            fileUploadArea.style.background = '';
-        }
-    });
-    
-    // Drag and drop functionality
-    fileUploadArea.addEventListener('dragover', function(e) {
-        e.preventDefault();
-        this.style.borderColor = '#667eea';
-        this.style.background = '#f8f9ff';
-    });
-    
-    fileUploadArea.addEventListener('dragleave', function(e) {
-        e.preventDefault();
-        this.style.borderColor = '#e1e8ed';
-        this.style.background = '';
-    });
-    
-    fileUploadArea.addEventListener('drop', function(e) {
-        e.preventDefault();
-        const files = e.dataTransfer.files;
-        if (files.length > 0) {
-            fileInput.files = files;
-            fileInput.dispatchEvent(new Event('change'));
-        }
-        this.style.borderColor = '#e1e8ed';
-        this.style.background = '';
-    });
+    if (fileInput && fileUploadArea && fileUploadText) {
+        fileInput.addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                fileUploadText.textContent = `Selected: ${file.name}`;
+                fileUploadArea.style.borderColor = '#28a745';
+                fileUploadArea.style.background = '#f8fff9';
+            } else {
+                fileUploadText.textContent = 'Click to select your CV or drag and drop';
+                fileUploadArea.style.borderColor = '#e1e8ed';
+                fileUploadArea.style.background = '';
+            }
+        });
+        
+        // Drag and drop functionality
+        fileUploadArea.addEventListener('dragover', function(e) {
+            e.preventDefault();
+            this.style.borderColor = '#667eea';
+            this.style.background = '#f8f9ff';
+        });
+        
+        fileUploadArea.addEventListener('dragleave', function(e) {
+            e.preventDefault();
+            this.style.borderColor = '#e1e8ed';
+            this.style.background = '';
+        });
+        
+        fileUploadArea.addEventListener('drop', function(e) {
+            e.preventDefault();
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                fileInput.files = files;
+                fileInput.dispatchEvent(new Event('change'));
+            }
+            this.style.borderColor = '#e1e8ed';
+            this.style.background = '';
+        });
+    }
     
     // Form submission
     if (form) {
@@ -474,4 +456,92 @@ document.addEventListener('DOMContentLoaded', function() {
             toggleApplicationForm();
         }
     });
+
+    // Ping Pong Carousel Auto-scroll
+    const carouselTrack = document.querySelector('.carousel-track');
+    const carouselSlides = document.querySelectorAll('.carousel-slide');
+    const prevBtn = document.querySelector('.carousel-btn-prev');
+    const nextBtn = document.querySelector('.carousel-btn-next');
+    
+    console.log('Carousel initialization:', {
+        track: carouselTrack,
+        slidesCount: carouselSlides.length,
+        prevBtn: prevBtn,
+        nextBtn: nextBtn
+    });
+    
+    if (carouselTrack && carouselSlides.length > 0) {
+        let currentIndex = 0;
+        const slideCount = carouselSlides.length;
+        let autoScrollInterval = null;
+        
+        console.log('Carousel ready with', slideCount, 'slides');
+        
+        function updateCarousel() {
+            const slideWidth = carouselTrack.parentElement.offsetWidth;
+            const offset = -currentIndex * slideWidth;
+            carouselTrack.style.transform = `translateX(${offset}px)`;
+            console.log('Updated carousel to index:', currentIndex, 'offset:', offset + 'px');
+        }
+        
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slideCount;
+            updateCarousel();
+        }
+        
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+            updateCarousel();
+        }
+        
+        function startAutoScroll() {
+            if (autoScrollInterval) {
+                clearInterval(autoScrollInterval);
+            }
+            autoScrollInterval = setInterval(nextSlide, 3000);
+            console.log('Auto-scroll started');
+        }
+        
+        function stopAutoScroll() {
+            if (autoScrollInterval) {
+                clearInterval(autoScrollInterval);
+                autoScrollInterval = null;
+            }
+            console.log('Auto-scroll stopped');
+        }
+        
+        // Button event listeners
+        if (nextBtn) {
+            nextBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                console.log('Next button clicked');
+                stopAutoScroll();
+                nextSlide();
+                startAutoScroll();
+            });
+        }
+        
+        if (prevBtn) {
+            prevBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                console.log('Previous button clicked');
+                stopAutoScroll();
+                prevSlide();
+                startAutoScroll();
+            });
+        }
+        
+        // Initialize carousel position
+        updateCarousel();
+        
+        // Recalculate on window resize
+        window.addEventListener('resize', updateCarousel);
+        
+        // Start auto-scrolling after a short delay
+        setTimeout(function() {
+            startAutoScroll();
+        }, 1000);
+    } else {
+        console.error('Carousel elements not found!');
+    }
 });

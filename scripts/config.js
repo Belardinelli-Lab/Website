@@ -40,13 +40,6 @@ const config = {
             hasPhoto: false
         },
         {
-            name: "Chiara Giannina Leu",
-            position: "Post-Doctoral Researcher",
-            description: "Conducting advanced research in neuroplasticity and brain stimulation techniques.",
-            photo: "",
-            hasPhoto: false
-        },
-        {
             name: "Elena Mongiardini",
             position: "Phd in Bioengineering",
             description: "Contributing to research projects and gaining experience in neuroscience methods.",

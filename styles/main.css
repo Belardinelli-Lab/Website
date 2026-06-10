@@ -422,6 +422,17 @@ h2 {
 .description {
     color: #666;
     font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.email {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.email a {
+    text-decoration: none;
+    color: #666
 }
 
 /* Join Us Section */

@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-    
+
     // Navbar background on scroll
     window.addEventListener('scroll', function() {
         const navbar = document.querySelector('.navbar');
@@ -214,17 +214,17 @@ document.addEventListener('DOMContentLoaded', function() {
     createScrollToTop();
     
     // Parallax effect for hero section
-    function parallaxEffect() {
-        const hero = document.querySelector('.hero');
-        const scrolled = window.pageYOffset;
-        const rate = scrolled * -0.5;
+    // function parallaxEffect() {
+    //     const hero = document.querySelector('.hero');
+    //     const scrolled = window.pageYOffset;
+    //     const rate = scrolled * -0.5;
         
-        if (hero) {
-            hero.style.transform = `translateY(${rate}px)`;
-        }
-    }
+    //     if (hero) {
+    //         hero.style.transform = `translateY(${rate}px)`;
+    //     }
+    // }
     
-    window.addEventListener('scroll', parallaxEffect);
+    // window.addEventListener('scroll', parallaxEffect);
     
     // Loading animation
     function showLoadingComplete() {
@@ -456,92 +456,86 @@ document.addEventListener('DOMContentLoaded', function() {
             toggleApplicationForm();
         }
     });
+}); // ← this closes the second DOMContentLoaded
 
-    // Ping Pong Carousel Auto-scroll
-    const carouselTrack = document.querySelector('.carousel-track');
-    const carouselSlides = document.querySelectorAll('.carousel-slide');
-    const prevBtn = document.querySelector('.carousel-btn-prev');
-    const nextBtn = document.querySelector('.carousel-btn-next');
-    
-    console.log('Carousel initialization:', {
-        track: carouselTrack,
-        slidesCount: carouselSlides.length,
-        prevBtn: prevBtn,
-        nextBtn: nextBtn
-    });
-    
-    if (carouselTrack && carouselSlides.length > 0) {
-        let currentIndex = 0;
-        const slideCount = carouselSlides.length;
-        let autoScrollInterval = null;
-        
-        console.log('Carousel ready with', slideCount, 'slides');
-        
-        function updateCarousel() {
-            const slideWidth = carouselTrack.parentElement.offsetWidth;
-            const offset = -currentIndex * slideWidth;
-            carouselTrack.style.transform = `translateX(${offset}px)`;
-            console.log('Updated carousel to index:', currentIndex, 'offset:', offset + 'px');
+// Ping Pong Carousel Auto-scroll
+document.addEventListener('DOMContentLoaded', function() {   // ← add this
+    document.querySelectorAll('.carousel-wrapper').forEach(function(wrapper) {
+        const track = wrapper.querySelector('.carousel-track');
+        const slides = wrapper.querySelectorAll('.carousel-track > *');
+        const prevBtn = wrapper.querySelector('.carousel-btn-prev');
+        const nextBtn = wrapper.querySelector('.carousel-btn-next');
+
+        if (!track || slides.length === 0) {
+            console.error('Carousel elements not found!');
+            return;
         }
-        
+
+        let currentIndex = 0;
+        const slideCount = slides.length;
+        let autoScrollInterval = null;
+
+        function updateCarousel() {
+            const slideWidth = track.parentElement.offsetWidth;
+            const offset = -currentIndex * slideWidth;
+            track.style.transform = `translateX(${offset}px)`;
+        }
+
         function nextSlide() {
             currentIndex = (currentIndex + 1) % slideCount;
             updateCarousel();
         }
-        
+
         function prevSlide() {
             currentIndex = (currentIndex - 1 + slideCount) % slideCount;
             updateCarousel();
         }
-        
+
         function startAutoScroll() {
-            if (autoScrollInterval) {
-                clearInterval(autoScrollInterval);
-            }
+            clearInterval(autoScrollInterval);
             autoScrollInterval = setInterval(nextSlide, 3000);
-            console.log('Auto-scroll started');
         }
-        
+
         function stopAutoScroll() {
-            if (autoScrollInterval) {
-                clearInterval(autoScrollInterval);
-                autoScrollInterval = null;
-            }
-            console.log('Auto-scroll stopped');
+            clearInterval(autoScrollInterval);
+            autoScrollInterval = null;
         }
-        
-        // Button event listeners
+
         if (nextBtn) {
             nextBtn.addEventListener('click', function(e) {
                 e.preventDefault();
-                console.log('Next button clicked');
                 stopAutoScroll();
                 nextSlide();
                 startAutoScroll();
             });
         }
-        
+
         if (prevBtn) {
             prevBtn.addEventListener('click', function(e) {
                 e.preventDefault();
-                console.log('Previous button clicked');
                 stopAutoScroll();
                 prevSlide();
                 startAutoScroll();
             });
         }
-        
-        // Initialize carousel position
+        // Pause auto-scroll on hover
+        wrapper.addEventListener('mouseenter', function() {
+            stopAutoScroll();
+        });
+
+        wrapper.addEventListener('mouseleave', function() {
+            if (wrapper.querySelector('img')) {
+                startAutoScroll();
+            }
+        });
+
         updateCarousel();
-        
-        // Recalculate on window resize
         window.addEventListener('resize', updateCarousel);
-        
-        // Start auto-scrolling after a short delay
-        setTimeout(function() {
-            startAutoScroll();
-        }, 1000);
-    } else {
-        console.error('Carousel elements not found!');
-    }
-});
+
+        if (wrapper.querySelector('img')) {
+            setTimeout(function() {
+                startAutoScroll();
+            }, 1000);
+        }
+    });
+}); // ← this closes the new DOMContentLoaded

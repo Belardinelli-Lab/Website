@@ -139,10 +139,13 @@ a:focus {
 
 /* Hero Section */
 .hero {
+    background-attachment: scroll;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/Pictures/manifattura.webp');
+    background-size: cover;
+    background-position: 50% 75%;
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Pictures/Lab 5.webp');
     background-position: 50% 75%;
     background-size: cover;
     background-position: center center;
@@ -180,6 +183,7 @@ a:focus {
     font-weight: 300;
     margin-bottom: 2rem;
     opacity: 0.9;
+    color: #ffffff;
 }
 
 .hero-description p {
@@ -239,7 +243,9 @@ h2 {
 
 /* Overview Section */
 .overview {
-    background: #f8f9fa;
+    background: #BD897E;
+    background-size: cover;
+    background-position: center;
 }
 
 .overview h2 {
@@ -306,7 +312,9 @@ h2 {
 }
 
 .research {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Pictures/sfondo 2.webp') center/cover;
+    background: #2c3e50;
+    background-size: cover;
+    background-position: center;
 }
 
 .research-grid {
@@ -358,7 +366,7 @@ h2 {
 
 /* Team Section */
 .team {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Pictures/sfondo 7.webp') center/cover;
+    background: #2c3e50 center/cover;
 }
 
 .team-grid {
@@ -475,7 +483,7 @@ h2 {
 /* Ping Pong Carousel Section */
 .ping-pong-carousel {
     padding: 4rem 0;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Pictures/sfondo 5.webp') center/cover;
+    background: #2c3e50 center/cover;
 }
 
 .ping-pong-carousel h2 {
@@ -509,6 +517,7 @@ h2 {
 .carousel-track {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    align-items: stretch;
 }
 
 .carousel-slide {
@@ -563,7 +572,8 @@ h2 {
 
 /* Master Projects Section */
 .masterprojects {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
+    background: #BD897E center/cover;
+    position: center;
 }
 .masterprojects h2 {
     color: white;
@@ -574,26 +584,68 @@ h2 {
 .masterprojects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: 5rem;
     margin-bottom: 3rem;
+}
+
+.application h3 {
+    font-size: 1.3rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.application p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    text-align: justify;
+    color: #ffffff !important;
+}
+
+.application a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.application li {
+    font-size: 1.1rem;
+    color: #ffffff;
+    text-indent: 1rem;
 }
 
 .masterprojects-item {
     background: #f8f9fa;
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 15px;
-    border-left: 4px solid #3498db;
+    border-left: 4px solid #2c3e50;
+    flex: 0 0 100%;
+    width: 100%;
+    min-height: 500px;
+    box-sizing: border-box
 }
 
 .masterprojects-item h3 {
+    margin-top: 0.5rem;
     font-size: 1.3rem;
     color: #2c3e50;
     margin-bottom: 0.5rem;
 }
 
+.masterprojects-item p {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.masterprojects-item ol {
+    color: #2c3e50;
+    list-style-position:inside;
+    padding:1rem;
+}
+
 /* Collaborations Section */
 .collaborations {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Pictures/sfondo\ 6.webp') center/cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Pictures/sfondo\ 6.webp');
+    background-size: cover;
+    background-position: center;
 }
 
 .collaboration-grid {
